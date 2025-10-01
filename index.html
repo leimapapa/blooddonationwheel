@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Blood Donation Wheel</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <svg viewBox="0 0 100 155" id="bloodDonationSvg">
+	<defs>
+		<radialGradient id="spinnerGrad" cy="40%">
+			<stop offset="0%" stop-color="#444"></stop>
+			<stop offset="100%" stop-color="#000"></stop>
+		</radialGradient>
+		<radialGradient id="bagGrad" cy="47%">
+			<stop offset="66%" stop-color="rgba(255,255,255,0)"></stop>
+			<stop offset="100%" stop-color="rgba(255,255,255,0.3)"></stop>
+		</radialGradient>
+	</defs>
+	<g transform="translate(0 63)">
+		<circle cx="50" cy="-15" r="25" stroke="#222" stroke-width="27.5" fill="none" />
+		<g>
+			<g id="bloodTypes">
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(-112.5 50 -15)" stroke="#ff0000" data-rotation="180" data-value="O-" data-donate="O+,A+,B+,AB+,O-,A-,B-,AB-" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(-67.5 50 -15)" stroke="#ee4b2b" data-rotation="135" data-value="A-" data-donate="A+,AB+,A-,AB-" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(-22.5 50 -15)" stroke="#dc143c" data-rotation="90" data-value="B-" data-donate="B+,AB+,B-,AB-" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(22.5 50 -15)" stroke="#bb0808" data-rotation="45" data-value="AB-" data-donate="AB+,AB-" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(67.5 50 -15)" stroke="#e0115f" data-rotation="0" data-value="O+" data-donate="O+,A+,B+,AB+" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(112.5 50 -15)" stroke="#ff3131" data-rotation="-45" data-value="A+" data-donate="A+,AB+" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(157.5 50 -15)" stroke="#d2042d" data-rotation="-90" data-value="B+" data-donate="B+,AB+" />
+				<circle cx="50" cy="-15" r="25" stroke-width="27" fill="none" stroke-dasharray="157.07963" stroke-dashoffset="137.44467625" transform="rotate(202.5 50 -15)" stroke="#ff2400" data-rotation="-135" data-value="AB+" data-donate="AB+" />
+				<g class="wheelText">
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(0 50 -15)" data-value="O+">O+</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(45 50 -15)" data-value="A+">A+</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(90 50 -15)" data-value="B+">B+</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(135 50 -15)" data-value="AB+">AB+</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(180 50 -15)" data-value="O-">O-</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(225 50 -15)" data-value="A-">A-</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(270 50 -15)" data-value="B-">B-</text>
+					<text class="donor" x="50" text-anchor="middle" dominant-baseline="middle" y="14.5" font-size="8" lengthAdjust="spacingAndGlyphs" textLength="10" transform="rotate(315 50 -15)" data-value="AB-">AB-</text>
+				</g>
+			</g>
+			<animateTransform class="ballAnim" attributeName="transform" attributeType="XML" type="rotate" values="0 50 50; 3600 50 50" dur="4000ms" begin="indefinite" repeatCount="1" keyTimes="0;1" keySplines="0.25 0.1 0.25 1" calcMode="spline"></animateTransform>
+		</g>
+		<path d="M 52 -3.5 a 12 12 0 1 0 -4 0 l 2 3 z" fill="url(#spinnerGrad)" class="spinner" />
+		<path d="M 50 5 a 1 1 0 0 0 0 -2 a 1 1 0 0 0 0 2" fill="none" stroke="#000" stroke-width="1" />
+		<path d="M 50 5 a 1 1 0 0 0 0 -2 a 1 1 0 0 0 0 2" fill="none" stroke="#444" stroke-width="0.3" />
+		<path d="M 50 3.5 v-4.5" fill="none" stroke="darkgrey" stroke-width=".5" stroke-linecap="round" />
+		<g fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round">
+			<g id="wires" fill="none">
+				<path id="oPos" d="M 50 23.4 q -10 22 -30 4" />
+				<path id="oNeg" d="M 50 23.4 q 10 22 30 4" />
+				<path id="aPos" d="M 50 23.4 q -5 37 -30 19" />
+				<path id="aNeg" d="M 50 23.4 q 5 37 30 19" />
+				<path id="bPos" d="M 50 23.4 q 0 59 -30 34" />
+				<path id="bNeg" d="M 50 23.4 q 0 59 30 34" />
+				<path id="abPos" d="M 50 23.4 q 0 79 -30 49" />
+				<path id="abNeg" d="M 50 23.4 q 0 79 30 49" />
+			</g>
+		</g>
+		<use href="#wires" stroke-width="1" stroke="#222" />
+		<g class="bloodWire" fill="none" stroke="#f00" stroke-width="1" stroke-linecap="round">
+			<use href="#oPos" stroke-dasharray="37.9253" stroke-dashoffset="37.9253">
+				<animate data-value="O+" attributeName="stroke-dashoffset" values="37.9253; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#oNeg" stroke-dasharray="37.9253" stroke-dashoffset="37.9253">
+				<animate data-value="O-" attributeName="stroke-dashoffset" values="37.9253; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#aPos" stroke-dasharray="47.7448" stroke-dashoffset="47.7448">
+				<animate data-value="A+" attributeName="stroke-dashoffset" values="47.7448; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#aNeg" stroke-dasharray="47.7448" stroke-dashoffset="47.7448">
+				<animate data-value="A-" attributeName="stroke-dashoffset" values="47.7448; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#bPos" stroke-dasharray="64.9493" stroke-dashoffset="64.9493">
+				<animate data-value="B+" attributeName="stroke-dashoffset" values="64.9493; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#bNeg" stroke-dasharray="64.9493" stroke-dashoffset="64.9493">
+				<animate data-value="B-" attributeName="stroke-dashoffset" values="64.9493; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#abPos" stroke-dasharray="80.0211" stroke-dashoffset="80.0211">
+				<animate data-value="AB+" attributeName="stroke-dashoffset" values="80.0211; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+			<use href="#abNeg" stroke-dasharray="80.0211" stroke-dashoffset="80.0211">
+				<animate data-value="AB-" attributeName="stroke-dashoffset" values="80.0211; 0" dur="1.5s" begin="indefinite" repeatCount="1" />
+			</use>
+		</g>
+		<path class="bloodBag" d="M 49 23 l -1 -2 l -1 1 h -1 l -1 -2 c -2 0 -1 -4 -1 -7 c 0 -4 -2 -8 6 -8 c 8 0 6 4 6 8 c 0 3 1 7 -1 7 l -1 2 h -1 l -1 -1 l -1 2 z" fill="url(#bagGrad)" stroke="#000" stroke-width="1" stroke-linejoin="round" />
+		<path class="bloodBag" d="M 49 23 l -1 -2 l -1 1 h -1 l -1 -2 c -2 0 -1 -4 -1 -7 c 0 -4 -2 -8 6 -8 c 8 0 6 4 6 8 c 0 3 1 7 -1 7 l -1 2 h -1 l -1 -1 l -1 2 z" fill="none" stroke="#444" stroke-width="0.3" stroke-linejoin="round" />
+
+		<g class="bloodText" text-anchor="end">
+			<text class="recipient" x="13.5" y="23.5" font-size="6" data-value="O+">
+				O+
+			</text>
+			<text class="recipient" x="13.5" y="38.5" font-size="6" data-value="A+">
+				A+
+			</text>
+			<text class="recipient" x="13.5" y="53.5" font-size="6" data-value="B+">
+				B+
+			</text>
+			<text class="recipient" x="13.5" y="68.5" font-size="6" data-value="AB+">
+				AB+
+			</text>
+			<text class="recipient" x="97.5" y="23.5" font-size="6" data-value="O-">
+				O-
+			</text>
+			<text class="recipient" x="97.5" y="38.5" font-size="6" data-value="A-">
+				A-
+			</text>
+			<text class="recipient" x="97.5" y="53.5" font-size="6" data-value="B-">
+				B-
+			</text>
+			<text class="recipient" x="97.5" y="68.5" font-size="6" data-value="AB-">
+				AB-
+			</text>
+		</g>
+		<g class="peeps" stroke="#000" stroke-width="0.2">
+			<path class="peep" id="peepR" d="M 80 71.5 l 1 1 l 5 0 v -3 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="AB-" />
+			<path class="peep" id="peepR" d="M 80 56.5 l 1 1 l 5 0 v -3 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="B-" />
+			<path class="peep" id="peepR" d="M 80 41.5 l 1 1 l 5 0 v -3 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="A-" />
+			<path class="peep" id="peepR" d="M 80 26.5 l 1 1 l 5 0 v -3 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="O-" />
+			<path class="peep" id="peepL" d="M 14 72.5 l 5 0 l 1 -1 v -2 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="AB+" />
+			<path class="peep" id="peepL" d="M 14 57.5 l 5 0 l 1 -1 v -2 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="B+" />
+			<path class="peep" id="peepL" d="M 14 42.5 l 5 0 l 1 -1 v -2 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="A+" />
+			<path class="peep" id="peepL" d="M 14 27.5 l 5 0 l 1 -1 v -2 c 0 -1 -1 -2 -3 -2 a 1 1 0 0 0 0 -4 a 1 1 0 0 0 0 4 c -2 0 -3 1 -3 2 z" data-value="O+" />
+		</g>
+	</g>
+</svg>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
