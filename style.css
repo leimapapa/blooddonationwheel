@@ -16,6 +16,7 @@ body {
 }
 #bloodTypes {
 	transition: 400ms;
+	-webkit-tap-highlight-color: transparent;
 }
 #bloodTypes circle {
 	transition: 400ms;
